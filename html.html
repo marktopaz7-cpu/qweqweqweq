@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Alfred Topaz | Personal Portfolio</title>
+    <!-- Tailwind CSS for modern responsive styling -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .dark {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 transition-colors duration-300 relative">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#home" class="font-bold text-xl tracking-tight text-blue-600 dark:text-blue-400">Mark.Topaz</a>
+            
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <!-- Light/Dark Mode Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:scale-105 transition">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" aria-label="Open mobile menu" class="md:hidden text-slate-700 dark:text-slate-200 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4 space-y-3 font-medium">
+            <a href="#home" class="block hover:text-blue-600">Home</a>
+            <a href="#about" class="block hover:text-blue-600">About</a>
+            <a href="#skills" class="block hover:text-blue-600">Skills</a>
+            <a href="#projects" class="block hover:text-blue-600">Projects</a>
+            <a href="#contact" class="block hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-44 md:pb-32 flex items-center min-h-screen">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 font-semibold rounded-full text-sm">
+                    Computer Science Student - CS 2A
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                    Hi, I'm <span class="text-blue-600 dark:text-blue-400">Mark Alfred Topaz</span>
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-lg mx-auto md:mx-0">
+                    Aspiring software developer passionate about building clean, responsive, and user-centric web applications.
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-lg shadow-blue-500/25 transition">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium rounded-lg transition">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-800">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60" alt="Mark Alfred Topaz Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-slate-100 dark:bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">About Me</h2>
+                <div class="w-12 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <p>
+                        Hello! I'm <strong>Mark Alfred Topaz</strong>, a dedicated second-year Computer Science student enrolled in section <strong>CS 2A</strong>. I have a deep curiosity for solving complex technical problems and transforming creative web design concepts into functional code.
+                    </p>
+                    <p>
+                        Beyond regular coursework, I actively engage in collaborative coding projects, keeping myself updated with modern programming practices, user interface design frameworks, and scalable web architectures.
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 space-y-6">
+                    <h3 class="text-xl font-semibold flex items-center gap-3 text-blue-600 dark:text-blue-400">
+                        <i class="fa-solid fa-graduation-cap"></i> Education & Experience
+                    </h3>
+                    <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="border-l-2 border-blue-600 pl-4">
+                            <span class="font-semibold block text-slate-800 dark:text-slate-100">Bachelor of Science in Computer Science (CS 2A)</span>
+                            Currently building strong fundamentals in data structures, algorithms, and web development.
+                        </li>
+                        <li class="border-l-2 border-blue-600 pl-4">
+                            <span class="font-semibold block text-slate-800 dark:text-slate-100">Lead Frontend Developer - Group Project</span>
+                            Successfully managed team workflow, interface code integration, and responsive layout testing for class web applications.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">My Skills</h2>
+                <div class="w-12 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="text-blue-600 dark:text-blue-400 text-3xl mb-4"><i class="fa-brands fa-html5"></i></div>
+                    <h3 class="font-semibold text-lg mb-2">HTML5 & CSS3</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Semantic elements, Flexbox, Grid, and responsive modern styling techniques.</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="text-blue-600 dark:text-blue-400 text-3xl mb-4"><i class="fa-brands fa-js"></i></div>
+                    <h3 class="font-semibold text-lg mb-2">JavaScript (ES6+)</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">DOM manipulation, event handling, asynchronous scripting, and app logic.</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="text-blue-600 dark:text-blue-400 text-3xl mb-4"><i class="fa-brands fa-python"></i></div>
+                    <h3 class="font-semibold text-lg mb-2">Python Programming</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Algorithmic logic problem solving, scripting, and backend fundamentals.</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="text-blue-600 dark:text-blue-400 text-3xl mb-4"><i class="fa-solid fa-code-branch"></i></div>
+                    <h3 class="font-semibold text-lg mb-2">Git & GitHub</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Version control, code management, commits, and remote repository hosting.</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="text-blue-600 dark:text-blue-400 text-3xl mb-4"><i class="fa-solid fa-wind"></i></div>
+                    <h3 class="font-semibold text-lg mb-2">Tailwind CSS</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Utility-first workflow for rapid, adaptive, and modern UI design configurations.</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="text-blue-600 dark:text-blue-400 text-3xl mb-4"><i class="fa-solid fa-database"></i></div>
+                    <h3 class="font-semibold text-lg mb-2">Database SQL Basics</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Relational database query writing, schema creation, and record management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-100 dark:bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Featured Projects</h2>
+                <div class="w-12 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold">Student Task Manager App</h3>
+                            <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-2.5 py-1 rounded-full font-medium">JavaScript</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm">
+                            A productivity web utility application allowing students to track assignments, set deadlines, and manage daily priorities with local storage persistence.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 flex items-center justify-between border-t border-slate-100 dark:border-slate-700/60 pt-4">
+                        <a href="https://github.com" target="_blank" class="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 flex items-center gap-1">
+                            Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold">CS Department Info Portal</h3>
+                            <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-2.5 py-1 rounded-full font-medium">HTML/CSS/JS</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm">
+                            A responsive mockup website designed for department announcements, schedules, and learning resource sharing tailored for student interaction.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 flex items-center justify-between border-t border-slate-100 dark:border-slate-700/60 pt-4">
+                        <a href="https://github.com" target="_blank" class="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 flex items-center gap-1">
+                            Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Get In Touch</h2>
+                <div class="w-12 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold">Let's Connect</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        I'm always open to discussing new academic collaborations, project ideas, or networking opportunities. Feel free to reach out via email or social links below!
+                    </p>
+                    <div class="space-y-4 text-slate-600 dark:text-slate-300 text-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-600 flex items-center justify-center">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span>markalfred.topaz@university.edu</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-600 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span>Philippines</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Contact Message Form -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Your Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Your Message</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-600 focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow transition">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden mt-4 p-3 bg-green-100 text-green-700 text-sm rounded-lg text-center font-medium">
+                        Thank you! Your message has been sent successfully.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 'Ask About Me' Chatbot Widget (Bottom Right Floating) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <!-- Chat Toggle Button -->
+        <button id="chatbot-toggle" aria-label="Open chat assistant" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-2xl flex items-center justify-center text-xl transition transform hover:scale-105">
+            <i class="fa-solid fa-comment-dots"></i>
+        </button>
+
+        <!-- Chat Box Window -->
+        <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-80 sm:w-96 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+            <!-- Chat Header -->
+            <div class="bg-blue-600 text-white px-4 py-3 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <span class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></span>
+                    <span class="font-semibold text-sm">Ask About Mark (CS 2A)</span>
+                </div>
+                <button id="chatbot-close" class="text-white hover:text-slate-200">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div id="chat-messages" class="p-4 h-72 overflow-y-auto space-y-3 text-sm bg-slate-50 dark:bg-slate-950/50">
+                <div class="flex items-start space-x-2">
+                    <div class="bg-blue-100 dark:bg-blue-900/60 text-slate-800 dark:text-slate-200 p-3 rounded-2xl rounded-tl-none max-w-[85%]">
+                        Hi there! I'm Mark's virtual assistant. Ask me anything or select a question below:
+                    </div>
+                </div>
+            </div>
+
+            <!-- Predefined Question Chips -->
+            <div class="p-2 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-1.5">
+                <button class="chat-chip text-xs bg-slate-100 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-blue-900 px-2.5 py-1 rounded-full transition text-slate-700 dark:text-slate-300">What is your course/section?</button>
+                <button class="chat-chip text-xs bg-slate-100 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-blue-900 px-2.5 py-1 rounded-full transition text-slate-700 dark:text-slate-300">What are your skills?</button>
+                <button class="chat-chip text-xs bg-slate-100 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-blue-900 px-2.5 py-1 rounded-full transition text-slate-700 dark:text-slate-300">How can I contact you?</button>
+            </div>
+
+            <!-- Chat Input Bar -->
+            <form id="chat-form" class="p-3 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex gap-2">
+                <input type="text" id="chat-input" placeholder="Type a question..." class="flex-1 px-3 py-2 text-sm border border-slate-300 dark:border-slate-700 rounded-lg bg-transparent focus:ring-1 focus:ring-blue-600 focus:outline-none">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
+        <p>&copy; 2026 Mark Alfred Topaz (CS 2A). All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Script -->
+    <script>
+        // Light / Dark Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Chatbot Widget Logic
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatChips = document.querySelectorAll('.chat-chip');
+
+        chatbotToggle.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('hidden');
+            chatInput.focus();
+        });
+
+        chatbotClose.addEventListener('click', () => {
+            chatbotWindow.classList.add('hidden');
+        });
+
+        function appendMessage(sender, text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `flex items-start space-x-2 ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+            
+            if (sender === 'user') {
+                messageDiv.innerHTML = `
+                    <div class="bg-blue-600 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%]">${text}</div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="bg-blue-100 dark:bg-blue-900/60 text-slate-800 dark:text-slate-200 p-3 rounded-2xl rounded-tl-none max-w-[85%]">${text}</div>
+                `;
+            }
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function getBotResponse(input) {
+            const query = input.toLowerCase();
+            if (query.includes('course') || query.includes('section') || query.includes('year')) {
+                return "Mark Alfred Topaz is a 2nd-year student pursuing a Bachelor of Science in Computer Science under section CS 2A.";
+            } else if (query.includes('skill') || query.includes('tech') || query.includes('know')) {
+                return "Mark is skilled in HTML5, CSS3, JavaScript (ES6+), Python, Git/GitHub, Tailwind CSS, and SQL database basics.";
+            } else if (query.includes('contact') || query.includes('email') || query.includes('reach')) {
+                return "You can reach Mark via email at markalfred.topaz@university.edu or through the contact message form on this portfolio!";
+            } else {
+                return "That's a great question! Feel free to ask about Mark's course/section, technical skills, or contact info.";
+            }
+        }
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const text = chatInput.value.trim();
+            if (!text) return;
+            
+            appendMessage('user', text);
+            chatInput.value = '';
+
+            setTimeout(() => {
+                const reply = getBotResponse(text);
+                appendMessage('bot', reply);
+            }, 500);
+        });
+
+        chatChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                const question = chip.textContent;
+                appendMessage('user', question);
+                setTimeout(() => {
+                    const reply = getBotResponse(question);
+                    appendMessage('bot', reply);
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
